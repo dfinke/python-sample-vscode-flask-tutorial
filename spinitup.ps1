@@ -1,9 +1,9 @@
-az group create -l eastus -n myflaskapp-rg
-az appservice plan create -g myflaskapp-rg -n myflaskappsp --is-linux --sku B1
-az webapp create -g myflaskapp-rg -p myflaskappsp -n dcfflaskapp --runtime "Python|3.6"
+az group create -l eastus -n deleteme-myflaskapp-rg
+az appservice plan create -g deleteme-myflaskapp-rg -n myflaskappsp123 --is-linux --sku B1
+az webapp create -g deleteme-myflaskapp-rg -p myflaskappsp123 -n dcfflaskapp123 --runtime "Python|3.6"
 
-az webapp config set -g myflaskapp-rg -n dcfflaskapp --startup-file startup.txt
+az webapp config set -g deleteme-myflaskapp-rg -n dcfflaskapp123 --startup-file startup.txt
 
-az webapp up -n dcfflaskapp
+az webapp up -n dcfflaskapp123
 
-# http://dcfflaskapp.azurewebsites.net
+# http://dcfflaskapp123.azurewebsites.net
