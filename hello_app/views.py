@@ -26,3 +26,11 @@ def hello_there(name = None):
 @app.route("/api/data")
 def get_data():
     return app.send_static_file("data.json")
+
+@app.route("/doug/")
+def from_doug():
+    return render_template(
+        "hello_there.html",
+        name="doug",
+        date=datetime.now()
+    )
